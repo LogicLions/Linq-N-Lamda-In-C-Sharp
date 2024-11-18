@@ -16,6 +16,7 @@
         //  Find Employee names having salary more than 50k and should be belonging to department having more than 5 employees
         public static void GetEmployeeNamesHavingMoreThanFiftySalAndBelongsToDeptHavingMoreThanFiveEmp()
         {
+            Console.WriteLine("----Find Employees having more than 50k salary and belongs to department having more than 5 employees----");
             var departments = Department.GetDepartmentList();
 
             var result = departments
@@ -28,11 +29,13 @@
             {
                 Console.WriteLine($"Id={item.Id}, Name={item.Name}, Salary={item.Salary}");
             }
+            Console.WriteLine("-------------------------------------------------------------------");
         }
 
         //(Linq) input - list of planned work , output - find description of work
         public static void GetDescriptionByPlannedWork()
         {
+            Console.WriteLine("----Having PlannedWork list, need to find their work descriptions in work order list-----");
             var plans = PlannedWork.GetPlannedWorkList();
             var orders = WorkOrder.GetWorkOrdersList();
 
@@ -50,6 +53,7 @@
             {
                 Console.WriteLine($"WorkOrderNumber:{item.WorkDescription}, WorkDescription:{item.WorkDescription}, ScheduledDate:{item.ScheduledDate}");
             }
+            Console.WriteLine("-------------------------------------------------------------------");
         }
     }
 }
